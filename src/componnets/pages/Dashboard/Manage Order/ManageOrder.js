@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 const ManageOrder = () => {
   const [Manages, setManages] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/service/Order/ALL`, {
+    fetch(`https://intense-ocean-33775.herokuapp.com/service/Order/ALL`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -25,12 +25,15 @@ const ManageOrder = () => {
         {
           label: "Yes",
           onClick: () => {
-            fetch(`http://localhost:5000/service/Order/ALLdelete/${id}`, {
-              method: "DELETE",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            })
+            fetch(
+              `https://intense-ocean-33775.herokuapp.com/service/Order/ALLdelete/${id}`,
+              {
+                method: "DELETE",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            )
               .then((response) => response.json())
               .then((data) => {
                 toast.success("SuccessFully Delete");
@@ -47,12 +50,15 @@ const ManageOrder = () => {
     });
   };
   const Pending = (id) => {
-    fetch(`http://localhost:5000/service/Order/pending/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    fetch(
+      `https://intense-ocean-33775.herokuapp.com/service/Order/pending/${id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

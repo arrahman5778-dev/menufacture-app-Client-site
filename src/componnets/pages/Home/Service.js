@@ -6,7 +6,7 @@ import Spinner from "../../shared/Spinner";
 const Service = () => {
   const Navigate = useNavigate();
   const { data: services, isLoading } = useQuery("service", () =>
-    fetch("http://localhost:5000/service", {
+    fetch("https://intense-ocean-33775.herokuapp.com/service", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -17,8 +17,8 @@ const Service = () => {
   if (isLoading) {
     return <Spinner></Spinner>;
   }
-  //http://localhost:5000
-  // http://localhost:5000/service
+  //https://intense-ocean-33775.herokuapp.com
+  // https://intense-ocean-33775.herokuapp.com/service
   // https://api.github.com/repos/tannerlinsley/react-query
   return (
     <div>

@@ -7,7 +7,7 @@ const UserToken = (user) => {
       const email = user?.user?.email;
       console.log(email);
       const userEmail = { email: email };
-      fetch(`http://localhost:5000/email/${email}`, {
+      fetch(`https://intense-ocean-33775.herokuapp.com/email/${email}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

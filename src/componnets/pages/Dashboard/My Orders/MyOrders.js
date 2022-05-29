@@ -10,13 +10,16 @@ const MyOrders = () => {
   const Navigate = useNavigate();
   const [UserOrder, setUserOrder] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/service/order/user/${user.email}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("AssesToken")}`,
-      },
-    })
+    fetch(
+      `https://intense-ocean-33775.herokuapp.com/service/order/user/${user.email}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("AssesToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data) {
@@ -32,12 +35,15 @@ const MyOrders = () => {
         {
           label: "Yes",
           onClick: () => {
-            fetch(`http://localhost:5000/service/payment/delete/${id}`, {
-              method: "DELETE",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            })
+            fetch(
+              `https://intense-ocean-33775.herokuapp.com/service/payment/delete/${id}`,
+              {
+                method: "DELETE",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            )
               .then((response) => response.json())
               .then((data) => {
                 if (data) {

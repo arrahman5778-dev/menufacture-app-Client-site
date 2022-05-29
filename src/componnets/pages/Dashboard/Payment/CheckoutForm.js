@@ -13,7 +13,7 @@ const CheckoutForm = ({ MyPayment }) => {
   useEffect(
     (MyPayment) => {
       const price = 100;
-      fetch(`http://localhost:5000/create-payment-intent`, {
+      fetch(`https://intense-ocean-33775.herokuapp.com/create-payment-intent`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const CheckoutForm = ({ MyPayment }) => {
       };
       if (paymentIntent) {
         fetch(
-          `http://localhost:5000/service/success/payment/${MyPayment?._id}`,
+          `https://intense-ocean-33775.herokuapp.com/service/success/payment/${MyPayment?._id}`,
           {
             method: "PATCH",
             headers: {

@@ -17,7 +17,7 @@ const AddReview = () => {
     const Review = { text, image, Rating };
     if (Number(Rating) < 6) {
       if (text) {
-        fetch("http://localhost:5000/review", {
+        fetch("https://intense-ocean-33775.herokuapp.com/review", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

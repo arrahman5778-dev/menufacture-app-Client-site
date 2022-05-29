@@ -5,7 +5,7 @@ const MakeAdmin = () => {
   const [Admin, setAdmin] = useState([]);
   const [AddAdmin, setAddAdmin] = useState(null);
   useEffect(() => {
-    fetch(`http://localhost:5000/email`, {
+    fetch(`https://intense-ocean-33775.herokuapp.com/email`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -20,7 +20,7 @@ const MakeAdmin = () => {
   }, [AddAdmin, Admin]);
   const AddAmin = (id) => {
     const email = id;
-    fetch(`http://localhost:5000/email/admin/${email}`, {
+    fetch(`https://intense-ocean-33775.herokuapp.com/email/admin/${email}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

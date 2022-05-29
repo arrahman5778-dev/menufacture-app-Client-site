@@ -7,13 +7,16 @@ const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [UserAdmin, setUserAdmin] = useState(null);
   useEffect(() => {
-    fetch(`http://localhost:5000/email/admin/${user.email}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("AssesToken")}`,
-      },
-    })
+    fetch(
+      `https://intense-ocean-33775.herokuapp.com/email/admin/${user.email}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("AssesToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.Admin === "role") {
@@ -25,7 +28,7 @@ const Dashboard = () => {
     <div className="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        <h1 className="text-center text-4xl p-3 font-serif font-bold text-secondary">
+        <h1 className="text-center text-4xl p-3 font-serif font-bold text-orange-500">
           Dashboard
         </h1>
         <div className="divider"> * * * *</div>

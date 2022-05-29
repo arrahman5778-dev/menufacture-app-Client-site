@@ -20,13 +20,16 @@ const Payment = () => {
     Number,
   } = Payment;
   useEffect(() => {
-    fetch(`http://localhost:5000/service/order/payment/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("AssesToken")}`,
-      },
-    })
+    fetch(
+      `https://intense-ocean-33775.herokuapp.com/service/order/payment/${id}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("AssesToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data) {

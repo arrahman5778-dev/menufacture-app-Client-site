@@ -31,7 +31,7 @@ const AddProduct = () => {
             prices,
             Message,
           };
-          fetch("http://localhost:5000/services", {
+          fetch("https://intense-ocean-33775.herokuapp.com/services", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

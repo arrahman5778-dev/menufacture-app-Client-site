@@ -6,7 +6,7 @@ const ManageProducts = () => {
   const [services, setServices] = useState([]);
   const [Delete, setDelete] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/service", {
+    fetch("https://intense-ocean-33775.herokuapp.com/service", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -26,12 +26,15 @@ const ManageProducts = () => {
         {
           label: "Yes",
           onClick: () => {
-            fetch(`http://localhost:5000/service/delete/${id}`, {
-              method: "DELETE",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            })
+            fetch(
+              `https://intense-ocean-33775.herokuapp.com/service/delete/${id}`,
+              {
+                method: "DELETE",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            )
               .then((response) => response.json())
               .then((data) => {
                 if (data) {

@@ -11,7 +11,7 @@ const PurchasePages = () => {
   const [Services, setServices] = useState({});
   const { name, images, AvailableStok, Quantity, prices, Message } = Services;
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`, {
+    fetch(`https://intense-ocean-33775.herokuapp.com/service/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -32,13 +32,16 @@ const PurchasePages = () => {
     if (Available >= Order && Order >= value) {
       const StokUpdate = parseInt(AvailableStok) - Order;
       if (StokUpdate) {
-        fetch(`http://localhost:5000/service/Update/${id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ AvailableStok: StokUpdate }),
-        })
+        fetch(
+          `https://intense-ocean-33775.herokuapp.com/service/Update/${id}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ AvailableStok: StokUpdate }),
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.modifiedCount) {
@@ -56,7 +59,7 @@ const PurchasePages = () => {
                 Pic,
                 Number,
               };
-              fetch(`http://localhost:5000/service/order`, {
+              fetch(`https://intense-ocean-33775.herokuapp.com/service/order`, {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",

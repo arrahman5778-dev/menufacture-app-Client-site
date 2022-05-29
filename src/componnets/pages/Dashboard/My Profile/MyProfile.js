@@ -23,13 +23,16 @@ const MyProfile = () => {
       Date: Date,
     };
     if (Profile) {
-      fetch(`http://localhost:5000/email/user/${user.email}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(Profile),
-      })
+      fetch(
+        `https://intense-ocean-33775.herokuapp.com/email/user/${user.email}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(Profile),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.modifiedCount === 1) {
@@ -41,13 +44,16 @@ const MyProfile = () => {
     }
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/email/MyProfile/${user.email}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("AssesToken")}`,
-      },
-    })
+    fetch(
+      `https://intense-ocean-33775.herokuapp.com/email/MyProfile/${user.email}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("AssesToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setUpdate(data);
