@@ -20,13 +20,13 @@ const Navbar = () => {
   /*======================== Router Link ==================== */
   const NavbarMenu = [
     <li key="1">
-      <NavLink to="/">Home</NavLink>
+      <NavLink to="/" className=" focus:bg-orange-500  focus:font-medium  active:bg-white">Home</NavLink>
     </li>,
     <li key="2">
-      <NavLink to="profile">Profile</NavLink>
+      <NavLink to="profile"  className=" focus:bg-orange-500  focus:font-medium">Profile</NavLink>
     </li>,
     <li key="3">
-      <NavLink to="/blog">Blog</NavLink>
+      <NavLink to="/blog"  className=" focus:bg-orange-500  focus:font-medium">Blog</NavLink>
     </li>,
     <li key="4">{user && <NavLink to="/dashboard">Dashboard</NavLink>}</li>,
     <label
@@ -95,9 +95,9 @@ const Navbar = () => {
             </ul>
           </div>
         ) : (
-          <button className="btn border-orange-500 text-orange-500 bg-white">
-            <Link to="/login">Login</Link>
-          </button>
+          <p className="  text-orange-500 bg-white ">
+            <Link to="/login" className=" py-2 px-3 rounded border border-orange-500 hover:bg-zinc-700">Login</Link>
+          </p>
         )}
       </div>
     </div>

@@ -154,7 +154,7 @@ const MyProfile = () => {
               <input
                 type="submit"
                 value="SAVE"
-                className="mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-indigo-700 rounded hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none"
+                className="mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-indigo-700 rounded hover:bg-zinc-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none"
               />
             </div>
           </form>
