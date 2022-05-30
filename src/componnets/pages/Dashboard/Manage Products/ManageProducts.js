@@ -80,7 +80,7 @@ const ManageProducts = () => {
                       alt="images"
                     />
                   </td>
-                  <td className="text-secondary">{service.name}</td>
+                  <td className="text-orange-500">{service.name}</td>
                   <td>{service.AvailableStok}</td>
                   <td>${service.prices}</td>
                   <td>

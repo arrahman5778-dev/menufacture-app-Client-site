@@ -20,7 +20,7 @@ const Navbar = () => {
   /*======================== Router Link ==================== */
   const NavbarMenu = [
     <li key="1">
-      <NavLink to="/" className=" focus:bg-orange-500  focus:font-medium  active:bg-white">Home</NavLink>
+      <NavLink to="/" className=" focus:bg-orange-500  focus:font-medium active:bg-orange-500">Home</NavLink>
     </li>,
     <li key="2">
       <NavLink to="profile"  className=" focus:bg-orange-500  focus:font-medium">Profile</NavLink>
