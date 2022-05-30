@@ -60,7 +60,7 @@ const AddReview = () => {
                 required
               ></textarea>
               <div className="text-left my-3">
-                <label htmlFor="Rating" className="py-2 text-xl text-secondary">
+                <label htmlFor="Rating" className="py-2 text-xl font-medium">
                   Rating
                 </label>
                 <br />
