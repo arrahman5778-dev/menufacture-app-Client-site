@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ReactHelmet from "../../hook/ReactHelmet";
-import Signup from "../../../assets/register.png";
+import Signup from "../../../assets/Sign up-rafiki.png";
 import google from "../../../assets/gogle.png";
 import { useForm } from "react-hook-form";
 import auth from "../../../firebase.init";
@@ -192,18 +192,18 @@ const Register = () => {
                         )}
                       </label>
                     </div>
-                    <div className="label-text-alt text-lime-400 text-xl font-medium">
+                    <div className="label-text-alt text-orange-400 text-xl font-medium pb-2">
                       <Link to="/login">Login....</Link>
                     </div>
                     <input
-                      className="form-control w-full max-w-xs btn"
+                      className="form-control w-full max-w-xs btn bg-orange-500 font-medium"
                       type="submit"
                       value="Register"
                     />
                   </form>
                   <button
                     onClick={() => signInWithGoogle()}
-                    className="btn mt-5 w-full btn-outline btn-primary"
+                    className="btn mt-5 w-full btn-outline "
                   >
                     <img className="w-[32px]" src={google} alt="" />
                     <h1 className="pl-2">CONTINUE WITH GOOGLE</h1>
