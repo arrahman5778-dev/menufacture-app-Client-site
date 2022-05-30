@@ -78,7 +78,7 @@ const AddReview = () => {
               <input
                 type="submit"
                 value="Add Review"
-                className="btn btn-primary"
+                className="p-2 rounded bg-orange-500 hover:bg-zinc-800 hover:text-orange-500 text-white font-medium"
               />
             </div>
           </form>

@@ -28,7 +28,7 @@ const Navbar = () => {
     <li key="3">
       <NavLink to="/blog"  className=" focus:bg-orange-500  focus:font-medium">Blog</NavLink>
     </li>,
-    <li key="4">{user && <NavLink to="/dashboard">Dashboard</NavLink>}</li>,
+    <li key="4">{user && <NavLink to="/dashboard" className=" focus:bg-orange-500  focus:font-medium">Dashboard</NavLink>}</li>,
     <label
       key="5"
       htmlFor="my-drawer-2"
