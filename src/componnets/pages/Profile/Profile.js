@@ -68,13 +68,13 @@ const Profile = () => {
                   <h1 className=" text-sm font-semibold">
                     2.{" "}
                     <span className=" text-purple-800 text-sm ml-2">
-                      
+                    https://whimsical-conkies-d65785.netlify.app/
                     </span>{" "}
                   </h1>
                   <h1 className=" text-sm font-semibold">
                     3.{" "}
                     <span className=" text-purple-800 text-sm ml-2">
-                      
+                    https://camera-world-ar.netlify.app/
                     </span>{" "}
                   </h1>
                 </div>
