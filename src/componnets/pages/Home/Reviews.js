@@ -99,7 +99,9 @@ const Reviews = () => {
                 <p className="m-5 font-bold ">
                   Sale 20% off your Collection days
                 </p>
-                <button className=" m-5 btn btn-primary">Button</button>
+                <button className=" m-5 py-1 px-3  rounded bg-orange-500 hover:bg-zinc-800 text-white font-medium">
+                  Button
+                </button>
               </div>
             </div>
           </div>

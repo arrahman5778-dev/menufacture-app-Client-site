@@ -10,7 +10,7 @@ const HomeCard = () => {
                         <h1 className='m-5 text-3xl font-bold '>YOU’LL BE HAPPY TO SEE OUR AWESOME</h1>
                         <h1 className='m-5 text-3xl font-bold text-orange-500 '>FEATURES.</h1>
                         <p className='m-5 font-bold text-slate-600'>Sale 20% off your Collection days</p>
-                        <button className=" py-1 px-3  rounded bg-orange-500 text-white font-medium">Button</button>
+                        <button className=" py-1 px-3  rounded bg-orange-500 hover:bg-zinc-800 hover:text-orange-500  text-white font-medium">Button</button>
 
                     </div>
                 </div>

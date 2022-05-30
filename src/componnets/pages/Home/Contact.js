@@ -76,7 +76,9 @@ const Contact = () => {
           </div>
 
           <div className="flex items-center justify-center w-full">
-            <button className="mt-9 text-base  leading-none text-white py-4 px-10 bg-primary rounded hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none">
+            <button className="mt-9 text-base  leading-none text-white py-4 px-10 
+            bg-orange-500 text-white font-medium
+             rounded hover:bg-zinc-800 hover:text-orange-500  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none">
               SUBMIT
             </button>
           </div>
