@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
           <img className="w-32 mx-auto" src={logo} alt="" />
           <p>
-            ACME Industries Ltd.
+            AR Industries Ltd.
             <br />
             Providing reliable tech since 1992
           </p>
