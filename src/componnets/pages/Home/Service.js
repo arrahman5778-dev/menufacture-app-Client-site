@@ -22,8 +22,8 @@ const Service = () => {
   // https://api.github.com/repos/tannerlinsley/react-query
   return (
     <div>
-      <h1 className=" my-20 text-4xl text-center text-secondary font-bold">
-        ## My Services ##
+      <h1 className=" my-20 text-4xl text-center t font-bold">
+   My <span className=" text-orange-500"> Services</span> 
       </h1>
       <div className=" max-w-7xl mx-auto px-3 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
         {services?.map((service) => (
@@ -53,7 +53,7 @@ const Service = () => {
               </p>
               <button
                 onClick={() => Navigate(`purchasePages/${service._id}`)}
-                className="btn  btn-outline btn-primary"
+                className="btn  border-orange-400 bg-white text-orange-500 "
               >
                 Buy Now
               </button>
